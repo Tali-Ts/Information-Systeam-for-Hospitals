@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GetAllBadConditionPatientsScreenController">
+   <children>
+      <Label layoutX="94.0" layoutY="11.0" prefHeight="119.0" prefWidth="384.0" text="Get All Bad Condition Patients" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <TableView fx:id="patientsTV" layoutY="213.0" prefHeight="261.0" prefWidth="571.0" visible="false">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="42.00002956390381" sortable="false" text="ID" />
+            <TableColumn fx:id="fnameColumn" prefWidth="108.66665267944336" sortable="false" text="First Name" />
+            <TableColumn fx:id="lnameColumn" prefWidth="107.33338928222656" sortable="false" text="Last Name" />
+            <TableColumn fx:id="statusColumn" prefWidth="43.33331298828125" sortable="false" text="Status" />
+            <TableColumn fx:id="conditionColumn" prefWidth="75.0" sortable="false" text="Condition" />
+            <TableColumn fx:id="diseaseColumn" prefWidth="63.3333740234375" sortable="false" text="Disease" />
+            <TableColumn fx:id="sdColumn" prefWidth="127.999989827474" sortable="false" text="Sub-Department" />
+         </columns>
+      </TableView>
+      <Label layoutX="181.0" layoutY="175.0" text="Doctor:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="docList" layoutX="253.0" layoutY="171.0" onAction="#activateQuery" prefWidth="150.0" promptText="Choose doctor:" visibleRowCount="5" />
+      <Label layoutX="12.0" layoutY="123.0" prefHeight="47.0" prefWidth="547.0" text="This screen returns all the patients whose condition is critical or serious and treated by the doctor you choose" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow color="#fcfafa" spread="0.87" />
+         </effect></Label>
+   </children>
+</AnchorPane>

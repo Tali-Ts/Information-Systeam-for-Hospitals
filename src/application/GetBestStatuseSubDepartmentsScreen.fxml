@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GetBestStatuseSubDepartmentsScreenController">
+   <children>
+      <Label layoutX="94.0" layoutY="1.0" prefHeight="119.0" prefWidth="384.0" text="Get Best Status Sub-Department" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <ListView fx:id="listView" layoutX="5.0" layoutY="155.0" onMouseClicked="#moreAboutInfo" prefHeight="67.0" prefWidth="561.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <TextArea fx:id="infoTextArea" editable="false" layoutX="113.0" layoutY="205.0" prefHeight="236.0" prefWidth="344.0" promptText="You can choose one of the sub-departments above to see more information about it" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="114.0" />
+      <Label alignment="CENTER" layoutX="11.0" layoutY="120.0" prefHeight="34.0" prefWidth="552.0" text="This screen returns the two sub-departments with the biggest amount of patients that have good condition" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" spread="0.87" />
+         </effect></Label>
+   </children>
+</AnchorPane>

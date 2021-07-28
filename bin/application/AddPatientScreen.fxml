@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPatientScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddPatientScreenController">
+   <children>
+      <Label layoutX="127.0" layoutY="125.0" text="First Name:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="177.0" text="Last Name:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="280.0" text="Sub-Department:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="229.0" text="Status:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="331.0" text="Disease:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameField" layoutX="259.0" layoutY="121.0" onKeyPressed="#validCharacters" onKeyTyped="#nameValidation" />
+      <TextField fx:id="lastNameFiled" layoutX="259.0" layoutY="173.0" onKeyPressed="#validCharacters" onKeyTyped="#nameValidation" />
+      <Label layoutX="210.0" layoutY="56.0" text="Add Patient">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <Button fx:id="addButton" layoutX="279.0" layoutY="387.0" mnemonicParsing="false" onAction="#add" prefHeight="44.0" prefWidth="97.0" styleClass="generalButton" stylesheets="@application.css" text="Add" />
+      <TextField fx:id="statusField" layoutX="261.0" layoutY="225.0" onKeyPressed="#validCharacters" onKeyTyped="#statusValidation" />
+      <ComboBox fx:id="subdepartmentList" layoutX="260.0" layoutY="276.0" prefWidth="150.0" promptText="Choose sub-department" visibleRowCount="5" />
+      <ComboBox fx:id="diseaseList" layoutX="260.0" layoutY="327.0" prefWidth="150.0" promptText="Choose disease" visibleRowCount="5" />
+      <Label fx:id="fnameErrorMessage" layoutX="228.0" layoutY="146.0" text="Oops! You must enter first name" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lnameErrorMessage" layoutX="228.0" layoutY="198.0" text="Oops! You must enter last name" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="statuseErrorMessage" layoutX="228.0" layoutY="249.0" text="Oops! You must enter status" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="subDepartmentErrorMessage" layoutX="202.0" layoutY="300.0" text="Oops! You must choose sub-department" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="diseaseErrorMessage" layoutX="238.0" layoutY="353.0" text="Oops! You must choose disease" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoLabel" layoutX="418.0" layoutY="275.0" text="?" visible="false">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#78eaf0" spread="0.85" />
+         </effect>
+         <tooltip>
+            <Tooltip fx:id="infoTooltip" text="You can only add patient to your own sub-department">
+               <font>
+                  <Font size="11.0" />
+               </font></Tooltip>
+         </tooltip>
+      </Label>
+      <Label fx:id="nameErrorMessage" layoutX="426.0" layoutY="136.0" prefHeight="54.0" prefWidth="128.0" text="Oops! You can enter only letters" textAlignment="CENTER" textFill="#fe0202" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusInfoLabel" layoutX="418.0" layoutY="224.0" text="?">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#78eaf0" spread="0.85" />
+         </effect>
+         <tooltip>
+            <Tooltip fx:id="statusInfoTooltip" text="status range is 0-100">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </Label>
+      <Label fx:id="statusRangErrorMessage" layoutX="436.0" layoutY="211.0" prefHeight="54.0" prefWidth="128.0" text="Oops! status can't be bigger than 100" textAlignment="CENTER" textFill="#fe0202" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusCharErrorMessage" layoutX="436.0" layoutY="211.0" prefHeight="54.0" prefWidth="128.0" text="Oops! you can enter only digits" textAlignment="CENTER" textFill="#fe0202" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

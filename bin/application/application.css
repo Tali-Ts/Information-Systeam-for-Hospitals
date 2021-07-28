@@ -1,0 +1,113 @@
+.generalButton {
+	-fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+	-fx-font-weight: bold;
+}
+
+.generalButton:hover {
+	 -fx-background-color: 
+        #000000,
+        linear-gradient(#d6d6d6 50%, white 100%);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+	-fx-font-weight: bold;
+}
+
+.menuButton {
+	 -fx-cell-size: 15;
+	 -fx-background-color: 
+        #008b8b,
+        linear-gradient(#66cdaa 70%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #48d1cc 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-padding: 10 10 10 10;
+}
+
+.menuButton:hover {
+	 -fx-cell-size: 15;
+	 -fx-background-color: 
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-padding: 10 10 10 10;
+}
+
+.removeButton {
+	-fx-background-image: url('removeClose.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+    -fx-background-color: #223768;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.removeButton:hover {
+	-fx-cell-size: 15;
+	-fx-background-image: url('removeOpen.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
+    -fx-background-color: #223768;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.progress-bar {
+    -fx-background-color:transparent;
+    -fx-background-insets: 0, 1;
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+}
+
+#start {
+	-fx-accent: rgb(255,255,255);
+}
+
+#bad {
+    -fx-accent: rgb(255,0,0);
+}
+
+#weak {
+	-fx-accent: rgb(255,128,0);
+}
+
+#better {
+    -fx-accent: rgb(255,255,0);
+}
+
+#excellent {
+    -fx-accent: rgb(0,255,0); 
+    
+}
+
+.progress-bar > .track {
+    -fx-background-color:transparent;
+    -fx-background-insets:  0, 1;
+}

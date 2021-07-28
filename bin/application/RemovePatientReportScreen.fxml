@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="removePatientReportScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RemovePatientReportScreenController">
+   <children>
+      <Label layoutX="60.0" layoutY="171.0" text="Patient Report:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="51.0" text="Remove Patient Report">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <Button fx:id="removeButton" layoutX="300.0" layoutY="310.0" mnemonicParsing="false" onAction="#remove" prefHeight="44.0" prefWidth="33.0" styleClass="removeButton" stylesheets="@application.css" />
+      <ComboBox fx:id="reportList" layoutX="176.0" layoutY="167.0" onAction="#prInfo" prefHeight="25.0" prefWidth="159.0" promptText="Choose report" visibleRowCount="5" />
+      <Label fx:id="errorMessage" layoutX="94.0" layoutY="205.0" text="Oops! You must choose report" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="reportInfo" layoutX="350.0" layoutY="126.0" prefHeight="157.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

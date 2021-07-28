@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0">
+         <image>
+            <Image url="@generalScreen.jpeg" />
+         </image>
+      </ImageView>
+      <MenuButton layoutX="30.0" layoutY="151.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="50.0" prefWidth="151.0" styleClass="menuButton" stylesheets="@application.css" text="          Add">
+        <items>
+          <MenuItem fx:id="addPanient" mnemonicParsing="false" onAction="#addPatientButton" text="Patient" />
+          <MenuItem fx:id="addDoctor" mnemonicParsing="false" onAction="#addDoctorButton" text="Doctor" />
+            <MenuItem fx:id="addNurse" mnemonicParsing="false" onAction="#addNurseButton" text="Nurse" />
+            <MenuItem fx:id="addPanientReport" mnemonicParsing="false" onAction="#addPatientReportButton" text="Patient Report" />
+            <MenuItem fx:id="addDisease" mnemonicParsing="false" onAction="#addDiseaseButton" text="Disease" />
+            <MenuItem fx:id="addDepartment" mnemonicParsing="false" onAction="#addDepartmentButton" text="Department" />
+            <MenuItem fx:id="addSubDepartment" mnemonicParsing="false" onAction="#addSubDepartmentButton" text="Sub-Department" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="30.0" layoutY="212.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="50.0" prefWidth="151.0" styleClass="menuButton" stylesheets="@application.css" text="      Remove">
+        <items>
+          <MenuItem fx:id="removePatient" mnemonicParsing="false" onAction="#removePatient" text="Patient" />
+          <MenuItem fx:id="removeDoctor" mnemonicParsing="false" onAction="#removeDoctor" text="Doctor" />
+            <MenuItem fx:id="removeNurse" mnemonicParsing="false" onAction="#removeNurse" text="Nurse" />
+            <MenuItem fx:id="removePatientReport" mnemonicParsing="false" onAction="#removePatientReport" text="Patient Report" />
+            <MenuItem fx:id="removeDisease" mnemonicParsing="false" onAction="#removeDisease" text="Disease" />
+            <MenuItem fx:id="removeDepartment" mnemonicParsing="false" onAction="#removeDepartment" text="Department" />
+            <MenuItem fx:id="removeSubDepartment" mnemonicParsing="false" onAction="#removeSubDepartment" text="Sub-Department" />
+        </items>
+      </MenuButton>
+      <Button fx:id="treatments" layoutX="30.0" layoutY="274.0" mnemonicParsing="false" onAction="#treatments" prefHeight="50.0" prefWidth="151.0" styleClass="menuButton" stylesheets="@application.css" text="Treatments" />
+      <Button fx:id="systemInfo" layoutX="30.0" layoutY="334.0" mnemonicParsing="false" onAction="#systemInfo" prefHeight="50.0" prefWidth="151.0" styleClass="menuButton" stylesheets="@application.css" text="System Information" />
+      <MenuButton layoutX="30.0" layoutY="395.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="50.0" prefWidth="151.0" styleClass="menuButton" stylesheets="@application.css" text="More Actions">
+         <items>
+            <MenuItem fx:id="getAllBadConditionPatients" mnemonicParsing="false" onAction="#getAllBadConditionPatients" text="Get All Bad Condition Patients" />
+            <MenuItem fx:id="findHardestWorkingNurse" mnemonicParsing="false" onAction="#findHardestWorkingNurse" text="Find Hardest Working Nurse" />
+            <MenuItem fx:id="getCriticalSteroidsNeuPatients" mnemonicParsing="false" onAction="#getCriticalSteroidsNeuPatients" text="Get Critical Steroids Neu Patients" />
+            <MenuItem fx:id="getBestStatusSubDepartments" mnemonicParsing="false" onAction="#getBestStatuseSubDepartments" text="Get Best Status Sub Departments" />
+            <MenuItem fx:id="getDoctorBySpec" mnemonicParsing="false" onAction="#getDoctorBySpecScreen" text="Get Doctor By Spec" />
+            <MenuItem fx:id="getDiseasesByRange" mnemonicParsing="false" onAction="#getDiseasesByRange" text="Get Diseases By Range" />
+            <MenuItem fx:id="getAllDifficultBreathingPatients" mnemonicParsing="false" onAction="#getAllDifficultBreathingPatients" text="Get All Difficult Breathing Patients" />
+            <MenuItem fx:id="treatDiseases" mnemonicParsing="false" onAction="#treatDisease" text="Treat Diseases" />
+            <MenuItem fx:id="treatPatients" mnemonicParsing="false" onAction="#treatPatients" text="Treat Patients" />
+         </items>
+      </MenuButton>
+      <Button fx:id="logoutButton" layoutX="30.0" layoutY="456.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="151.0" styleClass="menuButton" stylesheets="@application.css" text="Logout" />
+      <Label fx:id="greetingText" layoutX="30.0" layoutY="48.0" text="Label">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font></Label>
+      <AnchorPane fx:id="childScreen" layoutX="211.0" layoutY="106.0" prefHeight="475.0" prefWidth="571.0" />
+   </children>
+</AnchorPane>

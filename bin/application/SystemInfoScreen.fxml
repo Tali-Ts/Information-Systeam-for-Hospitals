@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="systemInfoScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SystemInfoScreenController">
+   <children>
+      <Label layoutX="124.0" layoutY="21.0" prefHeight="54.0" prefWidth="382.0" text="System Information">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <TabPane fx:id="tabPane" layoutX="14.0" layoutY="68.0" prefHeight="384.0" prefWidth="571.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <tabs>
+          <Tab fx:id="patientsTab" text="Patients">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="571.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="patientsTV" layoutY="28.0" prefHeight="327.0" prefWidth="571.0">
+                           <columns>
+                              <TableColumn fx:id="pIdColumn" prefWidth="42.00002956390381" sortable="false" text="ID" />
+                              <TableColumn fx:id="pFnameColumn" prefWidth="108.66665267944336" sortable="false" text="First Name" />
+                              <TableColumn fx:id="pLnameColumn" prefWidth="107.33338928222656" sortable="false" text="Last Name" />
+                              <TableColumn fx:id="pStatusColumn" prefWidth="43.33331298828125" sortable="false" text="Status" />
+                              <TableColumn fx:id="pConditionColumn" prefWidth="75.0" sortable="false" text="Condition" />
+                              <TableColumn fx:id="pDiseaseColumn" prefWidth="63.3333740234375" sortable="false" text="Disease" />
+                              <TableColumn fx:id="pSdColumn" prefWidth="127.999989827474" sortable="false" text="Sub-Department" />
+                           </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="pSearchCB" layoutX="216.0" layoutY="1.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField fx:id="pSearchField" layoutX="338.0" layoutY="1.0" prefHeight="25.0" prefWidth="111.0" />
+                        <Label layoutX="146.0" layoutY="5.0" prefHeight="18.0" prefWidth="62.0" text="Search:">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab fx:id="doctorsTab" text="Doctors">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="571.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="doctorsTV" layoutY="26.0" prefHeight="327.0" prefWidth="571.0">
+                           <columns>
+                              <TableColumn fx:id="docIdColum" prefWidth="23.333344101905823" sortable="false" text="ID" />
+                              <TableColumn fx:id="docFnameColum" prefWidth="105.33333778381348" sortable="false" text="First Name" />
+                              <TableColumn fx:id="docLnameColum" prefWidth="97.33334350585938" sortable="false" text="Last Name" />
+                              <TableColumn fx:id="docSpecColum" prefWidth="118.66670227050781" sortable="false" text="Specialization" />
+                              <TableColumn fx:id="docShiftColum" prefWidth="38.0" sortable="false" text="Shifts" />
+                              <TableColumn fx:id="docSbColum" prefWidth="101.33331298828125" sortable="false" text="Sub-Department" />
+                              <TableColumn fx:id="docPasswordColumn" prefWidth="87.99996948242188" sortable="false" text="password" visible="false" />
+                           </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="docSearchCB" layoutX="200.0" layoutY="1.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField fx:id="docSearchField" layoutX="320.0" layoutY="1.0" prefHeight="25.0" prefWidth="111.0" />
+                        <Label layoutX="129.0" layoutY="5.0" prefHeight="18.0" prefWidth="62.0" text="Search:">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="nursesTab" text="Nurses">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="571.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="nursesTV" layoutY="27.0" prefHeight="327.0" prefWidth="571.0">
+                           <columns>
+                              <TableColumn fx:id="nIdColum" prefWidth="22.666657090187073" sortable="false" text="ID" />
+                              <TableColumn fx:id="nFnameColum" prefWidth="102.66668891906738" sortable="false" text="First Name" />
+                              <TableColumn fx:id="nLnameColum" prefWidth="104.66667938232422" sortable="false" text="Last Name" />
+                              <TableColumn fx:id="nTreatColum" prefWidth="100.00001525878906" sortable="false" text="Treatments" />
+                              <TableColumn fx:id="nShiftColum" prefWidth="38.66668701171875" sortable="false" text="Shifts" />
+                              <TableColumn fx:id="nSbColum" prefWidth="99.33331298828125" sortable="false" text="Sub-Department" />
+                              <TableColumn fx:id="nPasswordColumn" prefWidth="99.999989827474" sortable="false" text="Password" visible="false" />
+                           </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="nSearchCB" layoutX="186.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField fx:id="nSearchField" layoutX="308.0" prefHeight="25.0" prefWidth="111.0" />
+                        <Label layoutX="116.0" layoutY="5.0" prefHeight="18.0" prefWidth="62.0" text="Search:">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="reportsTab" text="Reports">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="571.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="reportsTV" layoutY="27.0" prefHeight="327.0" prefWidth="571.0">
+                          <columns>
+                            <TableColumn fx:id="rIdColum" prefWidth="34.66665554046631" sortable="false" text="ID" />
+                            <TableColumn fx:id="rPatientColum" prefWidth="80.66662979125977" sortable="false" text="Patient" />
+                              <TableColumn fx:id="rDoctorColumn" prefWidth="80.6666488647461" sortable="false" text="Doctor" />
+                              <TableColumn fx:id="rDateColumn" prefWidth="80.66664123535156" sortable="false" text="Date" />
+                              <TableColumn fx:id="rDiseaseColumn" prefWidth="81.333251953125" sortable="false" text="Disease" />
+                              <TableColumn fx:id="rReleaseNoteCollumn" prefWidth="110.0" sortable="false" text="Release-Note" />
+                              <TableColumn fx:id="rSbColumn" prefWidth="101.33328247070312" sortable="false" text="Sub-Department" />
+                          </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="rSearchCB" layoutX="213.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField fx:id="rSearchField" layoutX="333.0" prefHeight="25.0" prefWidth="111.0" />
+                        <Label layoutX="142.0" layoutY="5.0" prefHeight="18.0" prefWidth="62.0" text="Search:">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="diseasesTab" text="Diseases">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="571.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="diseasesTV" layoutY="27.0" prefHeight="327.0" prefWidth="571.0">
+                          <columns>
+                            <TableColumn fx:id="dIdColumn" prefWidth="75.0" sortable="false" text="ID" />
+                            <TableColumn fx:id="dNameColumn" prefWidth="103.33330535888672" sortable="false" text="Name" />
+                              <TableColumn fx:id="dSymptomsColumn" prefWidth="391.3332977294922" sortable="false" text="Symptoms" />
+                          </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="dSearchCB" layoutX="203.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField fx:id="dSearchField" layoutX="324.0" prefHeight="25.0" prefWidth="111.0" />
+                        <Label layoutX="131.0" layoutY="4.0" prefHeight="18.0" prefWidth="62.0" text="Search:">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="departmentsTab" text="Departments">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="354.0" prefWidth="571.0" style="-fx-background-color: white;">
+                     <children>
+                        <TableView fx:id="departmentsTV" layoutY="27.0" prefHeight="327.0" prefWidth="571.0">
+                           <columns>
+                              <TableColumn fx:id="depIdColumn" prefWidth="75.0" sortable="false" text="ID" />
+                              <TableColumn fx:id="depNameColumn" prefWidth="135.99996185302734" sortable="false" text="Name" />
+                              <TableColumn fx:id="depSpecColumn" minWidth="4.66668701171875" prefWidth="189.33328247070312" sortable="false" text="Specialization" />
+                              <TableColumn fx:id="depSbColumn" prefWidth="172.6667022705078" sortable="false" text="Sub-Departments" />
+                           </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="depSearchCB" layoutX="210.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField fx:id="depSearchField" layoutX="331.0" prefHeight="25.0" prefWidth="111.0" />
+                        <Label layoutX="139.0" layoutY="5.0" prefHeight="18.0" prefWidth="62.0" text="Search:">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="subDepsTab" text="Sub-Departments">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="subDepList" layoutX="14.0" layoutY="47.0" prefHeight="25.0" prefWidth="170.0" promptText="choose sub-department" />
+                        <BarChart fx:id="subDepChart" categoryGap="1.0" layoutX="175.0" prefHeight="356.0" prefWidth="396.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="amount" side="LEFT" tickLabelGap="5.0" />
+                          </yAxis>
+                        </BarChart>
+                        <Button fx:id="showButton" layoutX="41.0" layoutY="135.0" mnemonicParsing="false" onAction="#setSubDepBarChart" styleClass="generalButton" stylesheets="@application.css" text="show" />
+                        <Label layoutX="22.0" prefHeight="47.0" prefWidth="133.0" text="choose sub-department:" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sdErrorMessage" layoutY="72.0" prefHeight="61.0" prefWidth="190.0" text="Oops! You must choose sub-department" textAlignment="CENTER" textFill="#fe0202" visible="false" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="infoLabel" alignment="CENTER" layoutX="1.0" layoutY="190.0" prefHeight="155.0" prefWidth="178.0" text="label" textAlignment="CENTER" visible="false" wrapText="true">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="MoreDataTab" text="More Data">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="patientList" layoutX="37.0" layoutY="99.0" prefHeight="25.0" prefWidth="125.0" promptText="choose patient" />
+                        <TextArea fx:id="patientInfo" editable="false" layoutX="224.0" layoutY="14.0" prefHeight="329.0" prefWidth="333.0" />
+                        <Label alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="76.0" prefWidth="178.0" text="Here you can find all the doctors and nurses that treated the specific patient you choose" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <effect>
+                              <DropShadow color="WHITE" spread="0.87" />
+                           </effect>
+                        </Label>
+                        <Button fx:id="showPInfoButton" layoutX="52.0" layoutY="170.0" mnemonicParsing="false" onAction="#showMorePData" styleClass="generalButton" stylesheets="@application.css" text="show" />
+                        <Label fx:id="patientErrorMessage" layoutX="9.0" layoutY="135.0" text="Oops! You must choose patient" textFill="#fe0202" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets top="-2.0" />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

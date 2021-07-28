@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPatientReportScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddPatientReportScreenController">
+   <children>
+      <Label layoutX="136.0" layoutY="148.0" text="Patient:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="patientList" layoutX="261.0" layoutY="144.0" prefWidth="150.0" promptText="Choose Patient" />
+      <Label layoutX="137.0" layoutY="201.0" text="Doctor:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="doctorList" layoutX="261.0" layoutY="197.0" prefWidth="150.0" promptText="Choose Doctor" />
+      <Label layoutX="132.0" layoutY="73.0" text="Add Patient Report">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <Button fx:id="addButton" layoutX="287.0" layoutY="383.0" mnemonicParsing="false" onAction="#add" prefHeight="44.0" prefWidth="97.0" styleClass="generalButton" stylesheets="@application.css" text="Add" />
+      <Label layoutX="134.0" layoutY="253.0" text="Date:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" editable="false" layoutX="261.0" layoutY="249.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label fx:id="patientErrorMessage" layoutX="229.0" layoutY="170.0" text="Oops! You must choose patient" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="doctorErrorMessage" layoutX="235.0" layoutY="223.0" text="Oops! You must choose doctor" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateErrorMessage" layoutX="235.0" layoutY="274.0" text="Oops! You must choose date" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

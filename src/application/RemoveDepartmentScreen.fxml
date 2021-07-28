@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="removeDepartmentScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RemoveDepartmentScreenController">
+   <children>
+      <Label layoutX="157.0" layoutY="204.0" text="Department:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="84.0" text="Remove Department">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <Button fx:id="removeButton" layoutX="307.0" layoutY="343.0" mnemonicParsing="false" onAction="#remove" prefHeight="44.0" prefWidth="33.0" styleClass="removeButton" stylesheets="@application.css" />
+      <ComboBox fx:id="departmentList" layoutX="260.0" layoutY="200.0" prefWidth="150.0" promptText="Choose department" visibleRowCount="5" />
+      <Label fx:id="errorMessage" layoutX="234.0" layoutY="238.0" text="Oops! You must choose department" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

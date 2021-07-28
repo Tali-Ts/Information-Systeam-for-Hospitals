@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GetDiseasesByRangeScreenController">
+   <children>
+      <Label layoutX="126.0" layoutY="21.0" prefHeight="119.0" prefWidth="362.0" text="Get Diseases By Range" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Calibri Bold" size="46.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6ef5fa" spread="0.65" />
+         </effect>
+      </Label>
+      <Label fx:id="from" layoutX="69.0" layoutY="174.0" text="from" AnchorPane.leftAnchor="69.0" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="to" layoutX="268.0" layoutY="174.0" text="to" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="174.0">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fromTextField" layoutX="126.0" layoutY="173.0" onKeyPressed="#backSpaceCheck" onKeyTyped="#charValidation" prefHeight="25.0" prefWidth="116.0" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="173.0" />
+      <TextField fx:id="toTextField" layoutX="296.0" layoutY="173.0" onKeyPressed="#backSpaceCheck" onKeyTyped="#charValidation" prefHeight="25.0" prefWidth="116.0" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="173.0" />
+      <TableView fx:id="diseasesTV" layoutY="255.0" prefHeight="219.0" prefWidth="571.0" visible="false">
+         <columns>
+            <TableColumn fx:id="dIdColumn" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="dNameColumn" prefWidth="103.33330535888672" text="Name" />
+            <TableColumn fx:id="dSymptomsColumn" prefWidth="391.3332977294922" text="Symptoms" />
+         </columns>
+      </TableView>
+      <Label fx:id="nameErrorMessage" layoutX="165.0" layoutY="204.0" prefHeight="23.0" prefWidth="249.0" text="Oops! You must enter only one letter" textAlignment="CENTER" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="searchButton" layoutX="425.0" layoutY="164.0" mnemonicParsing="false" onAction="#activateQuery" styleClass="generalButton" stylesheets="@application.css" text="search" />
+      <Label fx:id="alphabeticErrorMessage" layoutX="147.0" layoutY="222.0" prefHeight="23.0" prefWidth="297.0" text="The letters must be in right alphabetic order" textAlignment="CENTER" textFill="#fe0202" visible="false">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="44.0" layoutY="143.0" prefHeight="17.0" prefWidth="481.0" text="This screen return all the diseases that the first letter of their name is in the range  ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" spread="0.87" />
+         </effect></Label>
+   </children>
+</AnchorPane>
